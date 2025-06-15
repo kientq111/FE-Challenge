@@ -18,17 +18,17 @@ export const formatRuntime = (minutes: number): string => {
 };
 
 export const formatVoteAverage = (voteAverage: number): string => {
-    return voteAverage.toFixed(1);
+    return voteAverage?.toFixed(1);
 };
 
 export const formatCurrency = (amount: number): string => {
     if (amount >= 1_000_000_000) {
-        return `$${(amount / 1_000_000_000).toFixed(1)}B`;
+        return `$${(amount / 1_000_000_000)?.toFixed(1)}B`;
     } else if (amount >= 1_000_000) {
-        return `$${(amount / 1_000_000).toFixed(1)}M`;
+        return `$${(amount / 1_000_000)?.toFixed(1)}M`;
     } else if (amount >= 1_000) {
-        return `$${(amount / 1_000).toFixed(0)}K`;
+        return `$${(amount / 1_000)?.toFixed(0)}K`;
     } else {
-        return `$${amount.toLocaleString()}`;
+        return `$${amount?.toLocaleString()}`;
     }
 };
