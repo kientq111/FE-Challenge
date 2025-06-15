@@ -1,6 +1,22 @@
 # Project - _Movies_
 
-**Movies** is a movies app using the [The Movie Database API](https://developers.themoviedb.org/3).
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/kientq111/FE-Challenge.git
+cd my-app
+
+cp .env.copy .env
+
+npm install
+
+npm start
+
+```
 
 This is domain for this project I've deployed: https://fe-challenge-pi.vercel.app/
 
@@ -38,27 +54,10 @@ The following **additional** features are implemented:
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
-
-> Please record screen to a GIF file and attach link here
-
-## Submit
-
-**When you're done, send us back a link to a repository with your source code, with a description of what you've done and any build instructions in the readme!**
-
-> You can use this file as the readme (please update what you've done, build instructions).
-
-## License
-
-    Copyright [2016] [Nguyen Anh Kien]
-
-    Licensed under the Apache License, Version 2.0 (the "License");
-    you may not use this file except in compliance with the License.
-    You may obtain a copy of the License at
-
-        http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,
-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License for the specific language governing permissions and
-    limitations under the License.
+1. Automatic content fetching when scrolling to bottom: https://jumpshare.com/v/GcC2E775MRE6sr3ADhDp
+2. Filter movies by "Now Playing" and "Top Rated" categories: https://jumpshare.com/v/bPMjUUCXTxHMnHPTST6s
+3. Movie search with debounced input: https://jumpshare.com/v/ic9yKDM4jkS2xDObVrgj
+4. Detailed movie information on click: https://jumpshare.com/v/VV0iCneCGhtpKsPg4VB9
+## Live Demo
+The app is now live! Visit the deployment link to explore the features and functionality.
+Live URL: https://fe-challenge-pi.vercel.app/
