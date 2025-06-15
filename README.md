@@ -8,26 +8,26 @@
 
 The following **required** functionality is completed:
 
-- [X] User can view a list of movies currently playing in theaters. Poster images load asynchronously.
-- [X] Add a tab bar for **Now Playing** and **Top Rated** movies.
-- [X] Add a search bar.
-- [X] User can view movie details by tapping on a cell.
-- [X] User sees loading state while waiting for the API.
-- [X] User sees an error message when there is a network error.
-- [X] Simple responsive.
+- [x] User can view a list of movies currently playing in theaters. Poster images load asynchronously.
+- [x] Add a tab bar for **Now Playing** and **Top Rated** movies.
+- [x] Add a search bar.
+- [x] User can view movie details by tapping on a cell.
+- [x] User sees loading state while waiting for the API.
+- [x] User sees an error message when there is a network error.
+- [x] Simple responsive.
 
 The following **optional** features are implemented:
 
-- [X] Implement segmented control to switch between list view and grid view.
-- [X] All images fade in.
-- [X] Implement lazy load image.
-- [X] Customize the highlight and selection effect of the cell.
-- [ ] Improve UX loading by skeleton loading.
+- [x] Implement segmented control to switch between list view and grid view.
+- [x] All images fade in.
+- [x] Implement lazy load image.
+- [x] Customize the highlight and selection effect of the cell.
+- [x] Improve UX loading by skeleton loading.
 - [ ] Enhance responsive.
 
 The following **additional** features are implemented:
 
-- [X] List anything else that you can get done to improve the app functionality!
+- [x] List anything else that you can get done to improve the app functionality!
 
 ## Requirements
 
