@@ -9,7 +9,7 @@ import MovieModal from "./components/MovieModal/MovieModal";
 import LoadingSpinner from "./components/LoadingSpinner/LoadingSpinner";
 import ErrorMessage from "./components/ErrorMessage/ErrorMessage";
 import { scrollToTop } from "./utils";
-import "./app.scss";
+import "./global.scss";
 
 const tabs: Tab[] = [
   { id: "now_playing", label: "Now Playing", icon: "🎬" },
