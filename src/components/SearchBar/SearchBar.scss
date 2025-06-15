@@ -1,0 +1,56 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.search-bar {
+    width: 100%;
+    max-width: 500px;
+
+    &__input-container {
+        position: relative;
+        width: 100%;
+    }
+
+    &__input {
+        width: 100%;
+        padding: var(--spacing-md) var(--spacing-lg);
+        padding-right: 3rem;
+        font-size: 1rem;
+        background-color: var(--color-secondary);
+        border: 1px solid var(--color-border);
+        border-radius: var(--border-radius-lg);
+        color: var(--color-text-primary);
+        transition: all var(--transition-fast);
+
+        &::placeholder {
+            color: var(--color-text-muted);
+        }
+
+        &:focus {
+            outline: none;
+            border-color: var(--color-accent);
+            box-shadow: 0 0 0 2px rgba(255, 107, 107, 0.2);
+        }
+    }
+
+    &__clear-btn {
+        position: absolute;
+        right: var(--spacing-md);
+        top: 50%;
+        transform: translateY(-50%);
+        background: none;
+        border: none;
+        color: var(--color-text-muted);
+        cursor: pointer;
+        font-size: 1.2rem;
+        width: 24px;
+        height: 24px;
+        @include flex-center;
+        border-radius: 50%;
+        transition: all var(--transition-fast);
+
+        &:hover {
+            background-color: var(--color-border);
+            color: var(--color-text-primary);
+        }
+    }
+}

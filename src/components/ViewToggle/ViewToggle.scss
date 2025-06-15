@@ -1,0 +1,34 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.view-toggle {
+    display: flex;
+    background-color: var(--color-secondary);
+    border-radius: var(--border-radius-md);
+    padding: var(--spacing-xs);
+
+    &__button {
+        @include button-base;
+        background: none;
+        color: var(--color-text-muted);
+        padding: var(--spacing-sm);
+        border-radius: var(--border-radius-sm);
+        width: 36px;
+        height: 36px;
+        @include flex-center;
+
+        &:hover:not(&--active) {
+            color: var(--color-text-secondary);
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        &--active {
+            background-color: var(--color-accent);
+            color: var(--color-text-primary);
+        }
+    }
+
+    &__icon {
+        font-size: 1rem;
+    }
+}

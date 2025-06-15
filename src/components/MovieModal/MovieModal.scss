@@ -1,0 +1,190 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.movie-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(8px);
+    z-index: 1000;
+    @include flex-center;
+    padding: var(--spacing-lg);
+
+    &__content {
+        position: relative;
+        max-width: 900px;
+        max-height: 90vh;
+        width: 100%;
+        background: var(--color-card-bg);
+        border-radius: var(--border-radius-lg);
+        overflow: hidden;
+        overflow-y: auto;
+        box-shadow: var(--shadow-lg);
+    }
+
+    &__close {
+        position: absolute;
+        top: var(--spacing-md);
+        right: var(--spacing-md);
+        z-index: 10;
+        background: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(4px);
+        border: none;
+        color: var(--color-text-primary);
+        font-size: 1.5rem;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        cursor: pointer;
+        @include flex-center;
+        transition: all var(--transition-fast);
+
+        &:hover {
+            background: rgba(0, 0, 0, 0.9);
+            transform: scale(1.1);
+        }
+    }
+
+    &__loading,
+    &__error {
+        padding: var(--spacing-xxl);
+        @include flex-center;
+    }
+
+    &__backdrop {
+        position: relative;
+        height: 300px;
+        overflow: hidden;
+
+        @include tablet-up {
+            height: 400px;
+        }
+    }
+
+    &__backdrop-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__backdrop-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 50%;
+        background: linear-gradient(to top, var(--color-card-bg), transparent);
+    }
+
+    &__info {
+        display: flex;
+        gap: var(--spacing-xl);
+        padding: var(--spacing-xl);
+        margin-top: -100px;
+        position: relative;
+        z-index: 5;
+
+        @include mobile-only {
+            flex-direction: column;
+            gap: var(--spacing-lg);
+            margin-top: -80px;
+            padding: var(--spacing-lg);
+        }
+    }
+
+    &__poster {
+        flex-shrink: 0;
+        width: 200px;
+        aspect-ratio: 2/3;
+        border-radius: var(--border-radius-md);
+        overflow: hidden;
+        box-shadow: var(--shadow-lg);
+
+        @include mobile-only {
+            width: 150px;
+        }
+    }
+
+    &__poster-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__details {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-md);
+    }
+
+    &__title {
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 1.2;
+        color: var(--color-text-primary);
+
+        @include mobile-only {
+            font-size: 1.5rem;
+        }
+    }
+
+    &__tagline {
+        font-style: italic;
+        color: var(--color-text-secondary);
+        font-size: 1.1rem;
+    }
+
+    &__meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--spacing-md);
+        align-items: center;
+    }
+
+    &__rating,
+    &__year,
+    &__runtime {
+        display: flex;
+        align-items: center;
+        gap: var(--spacing-xs);
+        font-size: 0.875rem;
+        color: var(--color-text-secondary);
+    }
+
+    &__rating {
+        color: var(--color-accent);
+        font-weight: 600;
+    }
+
+    &__genres {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--spacing-sm);
+    }
+
+    &__genre {
+        background: var(--color-secondary);
+        color: var(--color-text-secondary);
+        padding: var(--spacing-xs) var(--spacing-sm);
+        border-radius: var(--border-radius-lg);
+        font-size: 0.75rem;
+        font-weight: 500;
+    }
+
+    &__overview {
+        h3 {
+            margin-bottom: var(--spacing-sm);
+            color: var(--color-text-primary);
+            font-size: 1.1rem;
+        }
+
+        p {
+            color: var(--color-text-secondary);
+            line-height: 1.6;
+        }
+    }
+}
