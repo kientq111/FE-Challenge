@@ -2,7 +2,7 @@
 
 **Movies** is a movies app using the [The Movie Database API](https://developers.themoviedb.org/3).
 
-- Total time: 72 hours (please no more!)
+This is domain for this project I've deployed: https://fe-challenge-pi.vercel.app/
 
 ## User Stories
 
