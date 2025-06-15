@@ -8,6 +8,7 @@ import MovieList from "./components/MovieList/MovieList";
 import MovieModal from "./components/MovieModal/MovieModal";
 import LoadingSpinner from "./components/LoadingSpinner/LoadingSpinner";
 import ErrorMessage from "./components/ErrorMessage/ErrorMessage";
+import { scrollToTop } from "./utils";
 import "./App.scss";
 
 const tabs: Tab[] = [
@@ -32,7 +33,7 @@ function App() {
 
   const handleTabChange = (tabId: string) => {
     setActiveTab(tabId);
-    setSearchQuery(""); // Clear search when switching tabs
+    setSearchQuery("");
   };
 
   const handleSearch = (query: string) => {
@@ -53,7 +54,9 @@ function App() {
     <div className="app">
       <header className="app__header">
         <div className="app__header-content">
-          <h1 className="app__title">Movies</h1>
+          <h1 className="app__title" onClick={scrollToTop}>
+            Movies
+          </h1>
 
           <div className="app__controls">
             <SearchBar onSearch={handleSearch} className="app__search" />
