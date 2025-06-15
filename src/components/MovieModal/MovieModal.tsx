@@ -199,7 +199,7 @@ const MovieModal: React.FC<MovieModalProps> = ({ movie, onClose }) => {
                           rel="noopener noreferrer"
                           className="movie-modal__additional-link"
                         >
-                          {movieDetails.imdb_id}
+                          Link to IMDB
                         </a>
                       </div>
                     )}
