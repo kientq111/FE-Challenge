@@ -53,7 +53,7 @@ function App() {
     <div className="app">
       <header className="app__header">
         <div className="app__header-content">
-          <h1 className="app__title">🎬 Movies</h1>
+          <h1 className="app__title">Movies</h1>
 
           <div className="app__controls">
             <SearchBar onSearch={handleSearch} className="app__search" />

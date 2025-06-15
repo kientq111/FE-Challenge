@@ -11,6 +11,12 @@ export const useMovies = (category: MovieCategory, searchQuery?: string) => {
     const [page, setPage] = useState(1);
     const [hasMore, setHasMore] = useState(true);
 
+    const getUniqueMovies = (existingMovies: Movie[], newMovies: Movie[]): Movie[] => {
+        const existingIds = new Set(existingMovies.map(movie => movie.id));
+        const uniqueNewMovies = newMovies.filter(movie => !existingIds.has(movie.id));
+        return [...existingMovies, ...uniqueNewMovies];
+    };
+
     const fetchMovies = async (pageNum: number = 1, reset: boolean = false) => {
         setLoading(true);
         setError(null);
@@ -33,7 +39,18 @@ export const useMovies = (category: MovieCategory, searchQuery?: string) => {
                     throw new Error('Invalid category');
             }
 
-            setMovies(prev => reset ? response.results : [...prev, ...response.results]);
+            setMovies(prev => {
+                if (reset) {
+                    //check duplicate mv id
+                    const uniqueResults = response.results.filter((movie, index, self) =>
+                        self.findIndex(m => m.id === movie.id) === index
+                    );
+                    return uniqueResults;
+                } else {
+                    return getUniqueMovies(prev, response.results);
+                }
+            });
+
             setHasMore(pageNum < response.total_pages);
             setPage(pageNum);
         } catch (err) {
