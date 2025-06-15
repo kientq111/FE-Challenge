@@ -1,5 +1,5 @@
 import React from "react";
-import "./TabBar.scss";
+import "./tab-bar.scss";
 
 export type Tab = {
   id: string;

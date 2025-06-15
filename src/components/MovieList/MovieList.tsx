@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useCallback } from "react";
 import { Movie } from "../../types/movie";
 import MovieCard from "../MovieCard/MovieCard";
 import LoadingSpinner from "../LoadingSpinner/LoadingSpinner";
-import "./MovieList.scss";
+import "./movie-list.scss";
 
 interface MovieListProps {
   movies: Movie[];

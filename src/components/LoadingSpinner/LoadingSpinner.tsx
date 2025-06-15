@@ -1,5 +1,5 @@
 import React from "react";
-import "./LoadingSpinner.scss";
+import "./loading-spinner.scss";
 
 interface LoadingSpinnerProps {
   size?: "small" | "medium" | "large";

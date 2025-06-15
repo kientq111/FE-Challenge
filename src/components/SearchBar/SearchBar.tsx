@@ -1,6 +1,6 @@
 import React, { useState, useCallback } from "react";
 import { debounce } from "../../utils/debounce";
-import "./SearchBar.scss";
+import "./search-bar.scss";
 
 interface SearchBarProps {
   onSearch: (query: string) => void;

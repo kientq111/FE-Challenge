@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Movie } from "../../types/movie";
 import { movieApi } from "../../services/api";
-import { formatVoteAverage, formatDate } from "../../utils/formatters";
-import "./MovieCard.scss";
+import { formatVoteAverage } from "../../utils/formatters";
+import "./movie-card.scss";
 
 interface MovieCardProps {
   movie: Movie;

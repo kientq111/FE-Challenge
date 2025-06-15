@@ -21,7 +21,7 @@ The following **optional** features are implemented:
 - [X] Implement segmented control to switch between list view and grid view.
 - [X] All images fade in.
 - [X] Implement lazy load image.
-- [ ] Customize the highlight and selection effect of the cell.
+- [X] Customize the highlight and selection effect of the cell.
 - [ ] Improve UX loading by skeleton loading.
 - [ ] Enhance responsive.
 

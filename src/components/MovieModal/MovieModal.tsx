@@ -9,7 +9,7 @@ import {
 } from "../../utils/formatters";
 import LoadingSpinner from "../LoadingSpinner/LoadingSpinner";
 import ErrorMessage from "../ErrorMessage/ErrorMessage";
-import "./MovieModal.scss";
+import "./movie-modal.scss";
 
 interface MovieModalProps {
   movie: Movie | null;

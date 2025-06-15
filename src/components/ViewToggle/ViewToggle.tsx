@@ -1,5 +1,5 @@
 import React from "react";
-import "./ViewToggle.scss";
+import "./view-toggle.scss";
 
 interface ViewToggleProps {
   viewMode: "list" | "grid";
