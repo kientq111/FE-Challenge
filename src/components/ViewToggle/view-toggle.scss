@@ -5,6 +5,7 @@
     display: flex;
     border-radius: var(--border-radius-md);
     padding: var(--spacing-xs);
+    gap: var(--spacing-xs);
 
     &__button {
         @include button-base;
