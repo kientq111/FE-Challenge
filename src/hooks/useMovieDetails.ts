@@ -23,7 +23,6 @@ export const useMovieDetails = (movieId: number | null) => {
                 setLoading(false);
             }
         };
-
         fetchMovieDetails();
     }, [movieId]);
 

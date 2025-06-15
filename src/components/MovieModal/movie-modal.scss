@@ -15,7 +15,7 @@
 
     &__content {
         position: relative;
-        max-width: 900px;
+        max-width: 1000px;
         max-height: 90vh;
         width: 100%;
         background: var(--color-card-bg);
@@ -97,14 +97,18 @@
 
     &__poster {
         flex-shrink: 0;
-        width: 200px;
+        width: 280px;
         aspect-ratio: 2/3;
         border-radius: var(--border-radius-md);
         overflow: hidden;
         box-shadow: var(--shadow-lg);
 
+        @include tablet-up {
+            width: 320px;
+        }
+
         @include mobile-only {
-            width: 150px;
+            width: 200px;
         }
     }
 
@@ -118,7 +122,13 @@
         flex: 1;
         display: flex;
         flex-direction: column;
-        gap: var(--spacing-md);
+        gap: var(--spacing-lg);
+    }
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-sm);
     }
 
     &__title {
@@ -132,13 +142,26 @@
         }
     }
 
+    &__original-title {
+        font-size: 0.9rem;
+        color: var(--color-text-secondary);
+        font-style: italic;
+    }
+
     &__tagline {
         font-style: italic;
         color: var(--color-text-secondary);
         font-size: 1.1rem;
+        margin-top: var(--spacing-xs);
     }
 
     &__meta {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+
+    &__meta-row {
         display: flex;
         flex-wrap: wrap;
         gap: var(--spacing-md);
@@ -147,7 +170,9 @@
 
     &__rating,
     &__year,
-    &__runtime {
+    &__runtime,
+    &__status,
+    &__languages {
         display: flex;
         align-items: center;
         gap: var(--spacing-xs);
@@ -158,6 +183,21 @@
     &__rating {
         color: var(--color-accent);
         font-weight: 600;
+    }
+
+    &__vote-count {
+        font-size: 0.75rem;
+        color: var(--color-text-tertiary);
+        margin-left: var(--spacing-xs);
+    }
+
+    &__status {
+        background: var(--color-success);
+        color: white;
+        padding: var(--spacing-xs) var(--spacing-sm);
+        border-radius: var(--border-radius-sm);
+        font-size: 0.75rem;
+        font-weight: 500;
     }
 
     &__genres {
@@ -175,16 +215,90 @@
         font-weight: 500;
     }
 
-    &__overview {
+    &__overview,
+    &__additional,
+    &__collection {
         h3 {
             margin-bottom: var(--spacing-sm);
             color: var(--color-text-primary);
             font-size: 1.1rem;
+            font-weight: 600;
+            border-bottom: 1px solid var(--color-border);
+            padding-bottom: var(--spacing-xs);
         }
 
         p {
             color: var(--color-text-secondary);
             line-height: 1.6;
+        }
+    }
+
+    &__additional-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: var(--spacing-md);
+
+        @include mobile-only {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__additional-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: var(--spacing-sm);
+        background: var(--color-background-secondary);
+        border-radius: var(--border-radius-sm);
+    }
+
+    &__additional-label {
+        font-weight: 500;
+        color: var(--color-text-secondary);
+    }
+
+    &__additional-value {
+        font-weight: 600;
+        color: var(--color-text-primary);
+    }
+
+    &__additional-link {
+        color: var(--color-accent);
+        text-decoration: none;
+        font-weight: 500;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+
+
+    &__collection-info {
+        display: flex;
+        align-items: center;
+        gap: var(--spacing-md);
+        padding: var(--spacing-md);
+        background: var(--color-background-secondary);
+        border-radius: var(--border-radius-sm);
+    }
+
+    &__collection-image {
+        width: 80px;
+        height: 45px;
+        object-fit: cover;
+        border-radius: var(--border-radius-xs);
+    }
+
+    &__collection-name {
+        font-weight: 500;
+        color: var(--color-text-primary);
+    }
+
+    // Responsive adjustments
+    @include mobile-only {
+        &__additional-grid {
+            gap: var(--spacing-sm);
         }
     }
 }
